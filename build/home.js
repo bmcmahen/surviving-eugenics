@@ -136,15 +136,18 @@ function Trailer(){
 }
 
 Trailer.prototype.show = function(){
+  this._activeElement = document.activeElement;
   this.$main.html(generateIframe());
   this.$el.addClass('show');
-}
+  this.$el.focus();
+};
 
 Trailer.prototype.close = function(e){
   e.preventDefault();
   this.$main.empty();
   this.$el.removeClass('show');
-}
+  $(this._activeElement).focus();
+};
 
 
 module.exports = function(){
@@ -153,7 +156,6 @@ module.exports = function(){
 
   function showTrailer(e){
     e.preventDefault();
-    console.log('show trailer');
     trailer.show();
   }
 
@@ -9371,7 +9373,7 @@ return jQuery;
 
 }, {}],
 7: [function(require, module, exports) {
-module.exports = '<div class=\'trailer\'>\n  <div class=\'header\'>\n    <button class=\'close\'>Close</button>\n  </div>\n  <div class=\'main\'>\n  \n  </div>\n</div>';
+module.exports = '<div class=\'trailer\' role=\'dialog\' aria-lablledby=\'dialog-title\' tabindex=\'-1\'>\n  <div id=\'dialog-title\'>Surviving Eugenics Trailer</div>\n  <div class=\'header\'>\n    <button class=\'close\'>Close</button>\n  </div>\n  <div class=\'main\'>\n  \n  </div>\n</div>';
 }, {}],
 4: [function(require, module, exports) {
 var $ = require('jquery/jquery@2.1.3:dist/jquery.js');
@@ -9483,7 +9485,7 @@ Bio.prototype.hide = function(){
 }
 }, {"jquery/jquery@2.1.3:dist/jquery.js":6,"./bio.html":8,"olsonpm/hoverintent-jqplugin@master:dist/hoverintent.js":9}],
 8: [function(require, module, exports) {
-module.exports = '<div class=\'bio\'>\n  <div class=\'bio-content\'>\n  </div>\n</div>';
+module.exports = '<div class=\'bio\' role=\'tooltip\' id=\'tooltip\'>\n  <div class=\'bio-content\'>\n  </div>\n</div>';
 }, {}],
 9: [function(require, module, exports) {
 /*!

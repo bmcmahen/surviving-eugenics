@@ -17,15 +17,18 @@ function Trailer(){
 }
 
 Trailer.prototype.show = function(){
+  this._activeElement = document.activeElement;
   this.$main.html(generateIframe());
   this.$el.addClass('show');
-}
+  this.$el.focus();
+};
 
 Trailer.prototype.close = function(e){
   e.preventDefault();
   this.$main.empty();
   this.$el.removeClass('show');
-}
+  $(this._activeElement).focus();
+};
 
 
 module.exports = function(){
@@ -34,7 +37,6 @@ module.exports = function(){
 
   function showTrailer(e){
     e.preventDefault();
-    console.log('show trailer');
     trailer.show();
   }
 
