@@ -32,7 +32,7 @@ Bio.prototype.bind = function(){
 
   $('.popup').hoverintent(
     function(e){
-      var $el = $(e.srcElement);
+      var $el = $(e.srcElement || e.target);
       var content = $el.next().html();
       self.show($el, content);
       if (self.timeout) {
