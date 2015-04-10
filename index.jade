@@ -2,7 +2,10 @@ html
   head
     title Surviving Eugenics Documentary Film
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(href='/build/style.css', rel='stylesheet')
+    if production
+      link(href='/build/style.css', rel='stylesheet')
+    else
+      link(href='/build/style.css', rel='stylesheet')
     link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
     script(src='//use.typekit.net/scy2mzb.js')
     script.
@@ -192,5 +195,7 @@ html
 
     button.to-top(data-600='opacity: 0; transform: translateX(50px)', data-700='opacity: 1; transform: translateX(0)')
 
-
-    script(src='/build/home.js')
+    if production
+      script(src='/build/home.min.js')
+    else
+      script(src='/build/home.js')
