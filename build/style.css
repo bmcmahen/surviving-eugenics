@@ -236,11 +236,11 @@ a.next-up:hover i {
 }
 
 .panel-header-1 {
-  height: 75%;
+  height: 80%;
 }
 
 .panel-2 {
-  background-image: url(images/inst4.jpg);
+  background-image: url(images/pts.jpg);
   background-size: cover;
   width: 100%;
   height: 125%;
@@ -248,7 +248,7 @@ a.next-up:hover i {
 }
 
 .panel-3 {
-  background-image: url(images/inst3.jpg);
+  background-image: url(images/eugenics-board.jpg);
   background-size: cover;
   width: 100%;
   height: 125%;
@@ -256,7 +256,7 @@ a.next-up:hover i {
 }
 
 .panel-4 {
-  background-image: url(images/shadows.jpg);
+  background-image: url(images/pts1.jpg);
   background-size: cover;
   width: 100%;
   height: 125%;
@@ -264,12 +264,12 @@ a.next-up:hover i {
 }
 
 img.archives {
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
 }
 
 .panel-3 .panel-header {
-  height: 70%;
+  height: 80%;
 }
 
 .panel-content.first-panel {
