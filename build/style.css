@@ -553,6 +553,21 @@ button.to-top:hover:before {
   transform: translateX(-50%) translateY(-5px);
 }
 
+.panel-citation {
+  position: absolute;
+  right: 15px;
+  top: 70%;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  max-width: 300px;
+  color: #999;
+}
+
+.last .panel-citation {
+  top: 55px;
+  max-width: 375px;
+}
+
 @media only screen and (max-width: 850px) {
   .panel-content {
     padding: 0 20px;
