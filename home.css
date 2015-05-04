@@ -86,7 +86,7 @@ h2 {
 h3 {
 /*  font-size: 1em;
   font-weight: 300;
-   font-style: italic; 
+   font-style: italic;
   font-weight: 400;
   margin-bottom: 1em;
   margin-top: 1.6em;*/
@@ -537,6 +537,26 @@ button.to-top:hover:before {
 .last .panel-citation {
   top: 55px;
   max-width: 375px;
+}
+
+.about-review {
+  text-align: right;
+}
+
+.about-review > p {
+  margin: 0;
+}
+
+.about-review > p:last-child {
+  font-style: italic;
+}
+
+.reviews hr {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  margin: 50px 0;
+  /* max-width: 300px; */
+  margin: 50px auto;
 }
 
 @media only screen and (max-width: 850px) {
